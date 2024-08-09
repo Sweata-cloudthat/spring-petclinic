@@ -4,14 +4,7 @@
 echo "Starting Apache server"
 
 # Start the Apache service
-sudo java -jar /var/www/html/spring-petclinic-3.3.0-SNAPSHOT.jar
+sudo java -jar /opt/spring-petclinic-3.3.0-SNAPSHOT.jar
 
-# Check if the Apache service started successfully
-if systemctl is-active --quiet httpd; then
-    echo "Apache is running"
-    exit 0
-else
-    echo "Apache failed to start"
-    exit 1
-fi
+
 
