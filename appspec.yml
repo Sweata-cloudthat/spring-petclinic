@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /target/spring-petclinic-3.3.0-SNAPSHOT.jar
     destination: /var/www/html/
+    overwrite: true
 
 hooks:
   ApplicationStop:
