@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Echo a message for logging
-echo "Starting Apache server"
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Start the Apache service
-sudo java -jar /opt/spring-petclinic-3.3.0-SNAPSHOT.jar
+nohup java -jar ${__dir}/yourappname.jar > /dev/null &
+
+exit $?
 
 
 
