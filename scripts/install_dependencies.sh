@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Stopping Apache server"
-sudo systemctl stop httpd
+echo "Checking Java running"
+java --version
 
