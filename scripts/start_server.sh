@@ -4,7 +4,7 @@
 echo "Starting Apache server"
 
 # Start the Apache service
-java -jar /var/www/html/spring-petclinic-3.3.0-SNAPSHOT.jar
+sudo java -jar /var/www/html/spring-petclinic-3.3.0-SNAPSHOT.jar
 
 # Check if the Apache service started successfully
 if systemctl is-active --quiet httpd; then
