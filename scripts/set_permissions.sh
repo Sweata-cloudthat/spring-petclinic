@@ -1,5 +1,7 @@
 #!/bin/bash
-echo "Setting permissions"
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 755 /var/www/html
 
+# Set permissions for AWS CodeDeploy install script
+echo "Setting permissions for AWS CodeDeploy install script..."
+chmod +x /home/ubuntu/install
+
+echo "Permissions set successfully."
