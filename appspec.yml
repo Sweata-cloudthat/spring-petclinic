@@ -2,10 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
+    destination: /home/ubuntu/
+    overwrite: true
 
 hooks:
-  ApplicationStop:
+  StopStart:
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
