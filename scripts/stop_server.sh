@@ -1,17 +1,14 @@
 #!/bin/bash
 
-# Echo a message for logging
-echo "Stopping Apache server"
+# Check if the application is running
+check=$(ps aux | grep '[s]pring-petclinic-3.3.0-SNAPSHOT.jar')
 
-# Stop the Apache service
-sudo systemctl stop apache2
-
-# Check if the Apache service stopped successfully
-if ! systemctl is-active --quiet apache2; then
-    echo "Apache has stopped successfully"
+# If check is not empty, the application is running
+if [ -n "$check" ]; then
+    echo "Application is running"
+    pkill -f spring-petclinic-3.3.0-SNAPSHOT.jar
     exit 0
 else
-    echo "Apache failed to stop"
+    echo "Application failed to stop or is not running"
     exit 1
 fi
-
